@@ -83,15 +83,15 @@ public class Utente {
   @Id
   @Column(name="ID_AVVISO")
 	public int idUtente;
-  @Column(name="ID_AVVISO")
+  @Column(name="NOME")
 	public String nome;
-  @Column(name="ID_AVVISO")
+  @Column(name="COGNOME")
 	public String cognome;
-  @Column(name="ID_AVVISO")
+  @Column(name="DATA_NASCITA")
 	public Date data_nascita;
-  @Column(name="ID_AVVISO")
+  @Column(name="CITTA")
 	public String citta;
-  @Column(name="ID_AVVISO")
+  @Column(name="TELEFONO")
 	public int telefono;
 	...		
 }
