@@ -3,11 +3,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Guru Uploading File</title>
+<title>Uploading Example</title>
 </head>
 <body>
 File: <br />
-<form action="guru_upload" method="post" enctype="multipart/form-data">
+<form action="FileManagement" method="post" enctype="multipart/form-data">
 <input type="file" name="guru_file" size="50" />
 <br />
 <input type="submit" value="Upload" />
