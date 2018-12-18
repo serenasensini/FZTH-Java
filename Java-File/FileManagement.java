@@ -41,6 +41,26 @@ public class FileManagement extends HttpServlet {
 		        request.getRequestDispatcher("/result.jsp").forward(request, response);
 		
 		    }
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		//FIXME: sostituire con il nome del file da scaricare
+		String file = "file/to/download";
+		//FIXME: sostituire con il percorso del file da scaricare
+		String path = "path/to/your/file";
+		response.setContentType("APPLICATION/OCTET-STREAM");
+		response.setHeader("Content-Disposition", "attachment; filename=\"" + file + "\"");
+ 
+		FileInputStream fileInputStream = new FileInputStream(path+ file);
+ 
+		int i;
+		while ((i = fileInputStream.read()) != -1) {
+			out.write(i);
+		}
+		fileInputStream.close();
+		out.close();
+	}
  
  
 }
