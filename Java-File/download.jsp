@@ -6,6 +6,6 @@
 <title>Download Example</title>
 </head>
 <body>
-Downloading File<a href="download">Download</a>
+Downloading File<a href="FileManagement">Download</a>
 </body>
 </html>
