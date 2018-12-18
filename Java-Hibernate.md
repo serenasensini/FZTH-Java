@@ -50,7 +50,7 @@ Nel database andremo a creare una tabella così fatta:
 
 ```
 CREATE TABLE UTENTE(
-	ID_UTENTE INT PRIMARY KEY,
+	ID_UTENTE INT PRIMARY KEY AUTOINCREMENT,
 	NOME VARCHAR(255) NOT NULL,
 	COGNOME VARCHAR(255) NOT NULL,
 	DATA_NASCITA DATE,
@@ -81,7 +81,7 @@ public class Utente {
 
   @GeneratedValue(strategy=GenerationType.IDENTITY)
   @Id
-  @Column(name="ID_AVVISO")
+  @Column(name="ID_UTENTE")
 	public int idUtente;
   @Column(name="NOME")
 	public String nome;
