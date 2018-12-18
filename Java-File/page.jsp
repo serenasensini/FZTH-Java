@@ -3,15 +3,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Upload File</title>
+<title>Guru Uploading File</title>
 </head>
 <body>
-<a>File Upload:</a>
-Select file: <br />
-<form action="action_file_upload.jsp" method="post"  enctype="multipart/form-data">
-<input type="file" name="file" size="50" />
+File: <br />
+<form action="guru_upload" method="post" enctype="multipart/form-data">
+<input type="file" name="guru_file" size="50" />
 <br />
-<input type="submit" value="Upload File" />
+<input type="submit" value="Upload" />
 </form>
 </body>
 </html>
