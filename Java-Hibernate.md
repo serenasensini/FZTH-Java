@@ -1,10 +1,10 @@
 # Java:Hibernate
 
-## Cos'è: JPA
+## Cos'è: JPA [?](https://it.wikipedia.org/wiki/Java_Persistence_API)
 
-Java Persistence API, talvolta riferite come JPA, è un framework per Java che si occupa della gestione della persistenza dei dati di un DBMS relazionale. [cfr. Wikipedia.org](https://it.wikipedia.org/wiki/Java_Persistence_API). La persistenza, in questo contesto, si occupa della mappatura tra lo schema relazionale della base dati e le Entity, classi annotate che rappresentano oggetti della base dati, tale mappatura viene descritta anche con il termine di object-relational mapping.
+Java Persistence API, talvolta riferite come JPA, è un framework per Java che si occupa della gestione della persistenza dei dati di un DBMS relazionale. La persistenza, in questo contesto, si occupa della mappatura tra lo schema relazionale della base dati e le Entity, classi annotate che rappresentano oggetti della base dati, tale mappatura viene descritta anche con il termine di object-relational mapping.
 
-## Cos'è: ORM
+## Cos'è: ORM [?](https://it.wikipedia.org/wiki/Object-relational_mapping)
 Il mapping relazionale a oggetti (ORM=Object-relational mapping) è semplicemente il processo di persistenza di qualsiasi oggetto Java direttamente su una tabella di database. Di solito, il nome dell'oggetto che viene mantenuto diventa il nome della tabella e ogni campo all'interno di quell'oggetto diventa una colonna. Con la tabella impostata, ogni riga corrisponde a un record nell'applicazione. JPA segue il pattern di tipo ORM.
 
 > Disclaimer: il tutorial usa PostgreSQL come DBMS, ma si può applicare a qualunque DBMS. Si presuppone che quindi le ultime versioni di questo siano già installate prima dell'inizio del tutorial.
