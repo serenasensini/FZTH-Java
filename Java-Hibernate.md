@@ -1,11 +1,26 @@
 # Java:Hibernate
 
+## Cos'è: JPA
+
+Java Persistence API, talvolta riferite come JPA, è un framework per Java che si occupa della gestione della persistenza dei dati di un DBMS relazionale. [cfr. Wikipedia.org](https://it.wikipedia.org/wiki/Java_Persistence_API). La persistenza, in questo contesto, si occupa della mappatura tra lo schema relazionale della base dati e le Entity, classi annotate che rappresentano oggetti della base dati, tale mappatura viene descritta anche con il termine di object-relational mapping.
+
+## Cos'è: ORM
+Il mapping relazionale a oggetti (ORM=Object-relational mapping) è semplicemente il processo di persistenza di qualsiasi oggetto Java direttamente su una tabella di database. Di solito, il nome dell'oggetto che viene mantenuto diventa il nome della tabella e ogni campo all'interno di quell'oggetto diventa una colonna. Con la tabella impostata, ogni riga corrisponde a un record nell'applicazione. JPA segue il pattern di tipo ORM.
+
 > Disclaimer: il tutorial usa PostgreSQL come DBMS, ma si può applicare a qualunque DBMS. Si presuppone che quindi le ultime versioni di questo siano già installate prima dell'inizio del tutorial.
 
 > Requisiti: vedi contenuto pom.xml più avanti.
 
-## Cos'è [?](https://hibernate.org/)
+## Cos'è: Hibernate [?](https://hibernate.org/)
 Si tratta di un framework che fornisce un servizio di Object-relational mapping (ORM) ovvero gestisce la persistenza dei dati sul database attraverso la rappresentazione e il mantenimento su database relazionale di un sistema di oggetti Java.
+Al suo interno, Hibernate è uno strumento di mappatura relazionale a oggetti che fornisce un'implementazione di JPA. Hibernate è una delle implementazioni JPA più mature in circolazione, con un'enorme comunità che supporta il progetto.
+Implementa tutte le classi javax.persistence che vedremo nell'esercizio oltre a fornire funzionalità oltre a JPA - Hibernate tools, validation e search. 
+
+Diamo una rapida occhiata a ciò che Hibernate offre con l'annotazione @Entity.
+
+Mentre soddisfa il pattern JPA, l'annotazione @Entity aggiunge ulteriori metadati che vanno oltre le specifiche JPA. Ciò consente di perfezionare la persistenza dell'entità. Ad esempio, diamo un'occhiata ad alcune annotazioni offerte da Hibernate che estendono le funzionalità di @Entity: @Table: ci consente di specificare il nome della tabella creata per l'entità; vale anche la pena notare alcune delle funzionalità extra che l'JPA non specifica, che potrebbero rivelarsi utili in applicazioni di grandi dimensioni:
+- Dichiarazioni CRUD personalizzabili con le annotazioni @SQLInsert, @SQLUpate e @SQLDelete;
+-Entità immutabili con l'annotazione @Immutable;
 
 ## Come funziona
 Dovendo mappare una certa entità Java con un'entità presente nel database, si può ricorrere ad un framework come Hibernate per la realizzazione del mapping: la gestione della persistenza dell'oggetto viene completamente gestita da quest'ultimo che, tramite determinate annotazioni all'interno delle classi Java, è in grado di "mappare" e lavorare con gli oggetti presenti all'interno di un certo database. 
