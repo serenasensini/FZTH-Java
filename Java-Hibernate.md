@@ -222,7 +222,5 @@ Nel caso precedente, come DBMS viene utilizzato PostgreSQL, e di conseguenza la 
 ```
 
 ## Tips
-- [X] Cos'è il modello MVC? Vedi (link) [https://it.wikipedia.org/wiki/Model-view-controller]
-- [X] Cos'è il modello ORM? Vedi (link)[https://it.wikipedia.org/wiki/Object-relational_mapping]
 - [X] Cosa uso per far dialogare il mio database con l'applicazione Java? Un driver ad hoc per il tipo di database; i principali (ultime versioni) sono MYSQL [driver](https://dev.mysql.com/downloads/connector/j/5.1.html), PostgreSQL (driver)[https://jdbc.postgresql.org/download.html], SQL Server (driver)[https://www.microsoft.com/it-it/download/details.aspx?id=11774], DB2 (driver)[http://www-01.ibm.com/support/docview.wss?uid=swg21363866]
 - [X] Come faccio a rendere una parola tutta in maiuscolo tramite shortcut? Ctrl+Maiusc+X (maiuscolo), Ctrl+Maiusc+Y (minuscolo).
