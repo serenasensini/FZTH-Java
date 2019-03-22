@@ -20,7 +20,7 @@ Diamo una rapida occhiata a ciò che Hibernate offre con l'annotazione @Entity.
 
 Mentre soddisfa il pattern JPA, l'annotazione @Entity aggiunge ulteriori metadati che vanno oltre le specifiche JPA. Ciò consente di perfezionare la persistenza dell'entità. Ad esempio, diamo un'occhiata ad alcune annotazioni offerte da Hibernate che estendono le funzionalità di @Entity: @Table: ci consente di specificare il nome della tabella creata per l'entità; vale anche la pena notare alcune delle funzionalità extra che l'JPA non specifica, che potrebbero rivelarsi utili in applicazioni di grandi dimensioni:
 - Dichiarazioni CRUD personalizzabili con le annotazioni @SQLInsert, @SQLUpate e @SQLDelete;
--Entità immutabili con l'annotazione @Immutable;
+- Entità immutabili con l'annotazione @Immutable;
 
 ## Come funziona
 Dovendo mappare una certa entità Java con un'entità presente nel database, si può ricorrere ad un framework come Hibernate per la realizzazione del mapping: la gestione della persistenza dell'oggetto viene completamente gestita da quest'ultimo che, tramite determinate annotazioni all'interno delle classi Java, è in grado di "mappare" e lavorare con gli oggetti presenti all'interno di un certo database. 
