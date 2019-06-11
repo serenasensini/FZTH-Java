@@ -1,6 +1,7 @@
 package com.javahelps.jpa;
 
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -13,9 +14,9 @@ public class Main {
             .createEntityManagerFactory("persistenceUnit");
 
     public static void main(String[] args) {
-
+        manageCart();
         // Create two Students
-        create(1, "Alice", 22); // Alice will get an id 1
+        /*create(1, "Alice", 22); // Alice will get an id 1
         create(2, "Bob", 20); // Bob will get an id 2
         create(3, "Charlie", 25); // Charlie will get an id 3
 
@@ -32,7 +33,7 @@ public class Main {
                 System.out.println(stu);
             }
         }
-
+*/
         // NEVER FORGET TO CLOSE THE ENTITY_MANAGER_FACTORY
         ENTITY_MANAGER_FACTORY.close();
     }
@@ -193,6 +194,34 @@ public class Main {
             ex.printStackTrace();
         } finally {
             // Close the EntityManager
+            manager.close();
+        }
+    }
+
+    public static void manageCart(){
+        EntityManager manager = ENTITY_MANAGER_FACTORY.createEntityManager();
+        EntityTransaction transaction = null;
+
+        try {
+            transaction = manager.getTransaction();
+            transaction.begin();
+
+            Items i1 = new Items();
+            Cart c = new Cart();
+            Set<Items> temp = c.getItems();
+            temp.add(i1);
+            c.setItems(temp);
+
+            manager.persist(c);
+
+            transaction.commit();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            ex.printStackTrace();
+        } finally {
             manager.close();
         }
     }

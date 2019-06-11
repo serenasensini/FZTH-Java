@@ -6,6 +6,7 @@
         <setting name="validation-enabled" value="true" />
         <datasource-mapping>
           <factory-entry name="JavaHelps" value="a91e40f8-e7a8-496a-867c-a03033a2b534" />
+          <factory-entry name="persistenceUnit" value="a91e40f8-e7a8-496a-867c-a03033a2b534" />
         </datasource-mapping>
         <naming-strategy-map />
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/resources/META-INF/persistence.xml" />
