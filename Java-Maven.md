@@ -1,11 +1,11 @@
 # Cos'è
-Apache Maven è uno strumento per la gestione dei progetti in Java. Uno dei vantaggi principali è quello di ottenere una 
-gestione e download automatico delle librerie necessarie al progetto con un'ovvia risoluzione delle eventuali dipendenze.
+
+Apache Maven è uno strumento per la gestione dei progetti in Java. Uno dei vantaggi principali è quello di ottenere una gestione e download automatico delle librerie necessarie al progetto con un'ovvia risoluzione delle eventuali dipendenze.
 Il principale componente di Maven è il file pom.xml, un file di configurazione che contiene tutte le informazioni che riguardano il progetto, come le dipendenze. POM sta per Project Object Model e ogni singolo progetto è descritto attraverso il file di configurazione pom.xml; aiuta l’esecuzione di un progetto Java, tenendo aggiornate le dipendenze del progetto, senza la necessità di dover scaricare e aggiornare a mano le singole librerie, così come le dipendenze di ciascuna di esse.
 
 Un esempio di file pom.xml è il seguente:
 
-```
+```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
@@ -88,6 +88,7 @@ Per esaminare meglio i vari tag, di seguito una breve spiegazione:
 Il miglior modo per trovare le librerie di cui si ha bisogno, così come le versioni necessarie, è sufficiente andare sul [repository](https://mvnrepository.com/) ufficiale e cercare il nome della libreria. Una volta selezionata, si può anche scorrere in basso e trovare le dipendenze di compilazione, se ce ne sono.
 
 ## Tips
+
 - Qual è il significato di groupId e artifactId? groupId identifica in modo univoco il tuo progetto in tutti i progetti, quindi è necessario applicare uno schema di denominazione. Un groupId deve seguire le regole del nome del pacchetto Java. Per esempio. it.progetto.java, it.progetto.java.models
 Un buon metodo per determinare la granularità di groupId è utilizzare la struttura del progetto. Cioè, se il progetto corrente è un progetto a più moduli, dovrebbe aggiungere un nuovo identificatore al groupId del genitore.
 artifactId è il nome del package senza versione. Se lo hai creato, puoi scegliere il nome che preferisci con lettere minuscole e senza strani simboli. Se si tratta di un vaso di terze parti, devi prendere il nome del barattolo mentre viene distribuito, quindi il nome del file .jar che verrà utilizzato.
